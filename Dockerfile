@@ -1,7 +1,7 @@
 FROM composer as build
 
 WORKDIR /build
-COPY composer.json composer.lock /build/
+COPY composer.json /build/
 RUN composer install
 
 FROM php:7.2-alpine
